@@ -50,8 +50,39 @@
             align-items: center;
         }
 
+        .bottom-title {
+
+            max-width: 500px;
+            margin: 0 auto;
+            height: 250px;
+            margin-top: 100px;
+
+            background-image: url("https://cdn.discordapp.com/attachments/1041596654878466092/1041603921325604935/Pocket_Recipe.png");
+            background-position: center;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
         .nav-link {
             color: black;
+            font-size: 20px;
 
         }
 
@@ -66,6 +97,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            margin-right: 40px;
 
         }
 
@@ -74,6 +106,7 @@
             border-radius: 50%;
             margin: 30px 0 0 35px;
             transition: width 0.5s ease-in-out;
+            
         }
 
         .btn:hover {
@@ -84,13 +117,19 @@
             margin-top: 100px;
             margin-left: 20px;
             margin-right: 20px;
-
         }
 
         .card_bottom {
             margin-top: 40px;
             margin-left: 20px;
             margin-right: 20px;
+        }
+
+        .card-desc {
+            overflow: auto;
+            width: fit-content;
+            height: 150px;
+            margin: 0 auto;
         }
     </style>
 
@@ -134,6 +173,17 @@
             $('#chin').hide();
             $('#chin2').hide();
         }
+        function kfood() {
+            $('#kor').show();
+            $('#kor2').show();
+            $('#int').hide();
+            $('#int2').hide();
+            $('#jap').hide();
+            $('#jap2').hide();
+            $('#chin').hide();
+            $('#chin2').hide();
+        }
+
 
     </script>
 </head>
@@ -162,7 +212,7 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class='category1'>
-                    <button type="button" class="btn btn-outline-secondary">한식</button>
+                    <button onclick="kfood()" type="button" class="btn btn-outline-secondary">한식</button>
                     <button onclick="chino()" type="button" class="btn btn-outline-secondary">중식</button>
                     <button onclick="zapan()" type="button" class="btn btn-outline-secondary">일식</button>
                     <button onclick="fatty()" type="button" class="btn btn-outline-secondary">양식</button>
@@ -176,9 +226,12 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">불고기</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 불고기, 식용유, 물, 간장, 파, 마늘</p>
+                                    <hr class="card-desc">1.불고기는 먹기 좋은 크기로 썬다</hr>
+                                    <hr class="card-desc">2.양념장을 만든다</hr>
+                                    <hr class="card-desc">3.불고기에 양념장을 넣고 잘 섞는다</hr>
+                                    <hr class="card-desc">4.팬에 약간의 기름을 두르고 불고기를 익힌다</hr>
+                                    <hr class="card-desc">5.구운 고기 위에 쪽파를 뿌린다</hr>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +241,10 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">김치볶음밥</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 밥, 다진양파, 김치, 햄</p>
+                                    <hr class="card-desc">1.양념장을 만든다</hr>
+                                    <hr class="card-desc">2.달군팬에 식용유를 두른뒤 양파,김치,햄을 넣고 볶는다</hr>
+                                    <hr class="card-desc">3.양념장과 밥을 넣고 볶는다</hr>
                                 </div>
                             </div>
                         </div>
@@ -198,9 +254,11 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">비빔밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 돼지고기, 애호박, 양파, 당근, 밥</p>
+                                    <hr class="card-desc">1.재료를 채썰어서 준비한다</hr>
+                                    <hr class="card-desc">2.양념장을 만든다</hr>
+                                    <hr class="card-desc">3.야채를 볶는다</hr>
+                                    <hr class="card-desc">4.따뜻한 밥위에 볶은 야채를 올리고 양념장을 넣는다</hr>
                                 </div>
                             </div>
                         </div>
@@ -210,9 +268,10 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">비빔국수</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 국수, 양파, 깻잎, 마늘, 고추장</p>
+                                    <hr class="card-desc">1.야채를 채썰어 준비한다</hr>
+                                    <hr class="card-desc">2.비빔장을 만든다</hr>
+                                    <hr class="card-desc">3.면을 삶고 비빔장과 야채와 섞어 비빈다</hr>
                                 </div>
                             </div>
                         </div>
@@ -226,9 +285,13 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">파전</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 파, 당근, 고추, 밀가루, 달걀</p>
+                                    <hr class="card-desc">1.밀가루에 물을 넣고 잘 풀어준다
+                                    </hr>
+                                    <hr class="card-desc">2.야채를 채썰어 함께 넣는다
+                                    </hr>
+                                    <hr class="card-desc">3.파를 씻어 반죽에 섞는다</hr>
+                                    <hr class="card-desc">4.팬에 식용유를 두르고 반죽을 가지런히 올려 부친다 </hr>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +301,14 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">칼국수</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 칼국수 면, 육수, 달걀, 쪽파
+                                    </p>
+                                    <hr class="card-desc">1.육수를 끓인다
+                                    </hr>
+                                    <hr class="card-desc">2.준비한 면을 넣고 익혀준다
+                                    </hr>
+                                    <hr class="card-desc">3.면이 익으면 간을 하고 달걀을 넣어준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -248,9 +318,16 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">알밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 날치알, 당근, 김치, 설탕, 밥
+                                    </p>
+                                    <hr class="card-desc">1.야채를 잘게 다진다
+                                    </hr>
+                                    <hr class="card-desc">2.김치를 씻어 물기를 제거하고 썰어준다
+                                    </hr>
+                                    <hr class="card-desc">3.팬에 기름을 두르고 재료를 모두 볶는다
+                                    </hr>
+                                    <hr class="card-desc">4.준비된 재료를 밥위에 올리고 비벼준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -260,9 +337,14 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">김밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 밥, 김밥용 김, 햄, 단무지, 계란
+                                    </p>
+                                    <hr class="card-desc">1.밥을 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.야채를 썰어 준비한다
+                                    </hr>
+                                    <hr class="card-desc">3.김밥용 김 위에 밥과 야채를 올리고 말아준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -277,9 +359,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">딤섬</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 게맛살, 라이스페이퍼, 부추, 달걀</p>
+                                    <hr class="card-desc">1.야채를 다져서 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.양념장을 만든다
+                                    </hr>
+                                    <hr class="card-desc">3.라이스페이퍼를 물에 담갔다 펼친 후 재료를 넣는다
+                                    </hr>
+                                    <hr class="card-desc">4.찜기에 올려 5분정도 찐다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +377,14 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">칠리새우</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 새우, 다진마늘, 간장,설탕,버터
+                                    </p>
+                                    <hr class="card-desc">1.야채와 새우를 넣고 볶는다
+                                    </hr>
+                                    <hr class="card-desc">2.양념재료를 모두 넣고 볶는다
+                                    </hr>
+                                    <hr class="card-desc">3.파슬리가루나 파를 뿌려 완성한다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -299,9 +394,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">딤섬탕</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 게맛살,라이스페이퍼,야채,달걀,육수
+                                    </p>
+                                    <hr class="card-desc">1.야채를 다져서 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.양념장을 만든다
+                                    </hr>
+                                    <hr class="card-desc">3.라이스페이퍼를 물에 담갔다 펼친 후 재료를 넣는다
+                                    </hr>
+                                    <hr class="card-desc">4.찜기에 올려 5분정도 찐다
+                                    </hr>
+                                    <hr class="card-desc">5.완성된 딤섬을 육수에 넣고 가볍게 끓여준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -311,9 +415,16 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">우육탕면</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 소고기, 면, 생강,야채
+                                    </p>
+                                    <hr class="card-desc">1.고기를 준비해 끓이고 건져내 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.육수에 야채와 생강을 넣고 끓인다
+                                    </hr>
+                                    <hr class="card-desc">3.고기와 생강과 야채가 담긴 팬에 육수를 붓고 끓인다
+                                    </hr>
+                                    <hr class="card-desc">4.삶은 면에 익힌 고기와 야채를 넣고 육수를 부어준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -327,9 +438,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">댄댄누들</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 면,양념장,야채</p>
+                                    <hr class="card-desc">1.면을 삶아 건져서 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.야채와 버섯을 다듬어준다
+                                    </hr>
+                                    <hr class="card-desc">3.육수에 양념장을 풀고 면과 야채를 넣어 끓여준다
+                                    </hr>
+                                    <hr class="card-desc">4.향신료를 넣어 마무리한다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -339,7 +456,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">양차우볶음밥</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 밥,새우,파,당근,부추</p>
+                                    <hr class="card-desc">1.야채를 잘게 다져서 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2.식용유를 두른 팬에 야채와 새우를 볶는다
+                                    </hr>
+                                    <hr class="card-desc">3.계란이 있다면 넣는다
+                                    </hr>
+                                    <hr class="card-desc">4.밥을 넣고 밥과 재료를 잘 섞으며 볶는다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -349,9 +474,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">중국식돼지볶음</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 돼지고기,배추,당면,다진마늘,간장</p>
+                                    <hr class="card-desc">1. 돼지고기를 갈아서 준비하고 야채는 다진다
+                                    </hr>
+                                    <hr class="card-desc">2.당면을 불려준다
+                                    </hr>
+                                    <hr class="card-desc">3.팬에 식용유를 두르고 마늘과 야채를 볶는다
+                                    </hr>
+                                    <hr class="card-desc">4.돼지고기를 넣고 함께 볶는다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -361,9 +492,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">춘권</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 잡채,무생채,달걀,쪽파,밀가루</p>
+                                    <hr class="card-desc">1. 야채를 썰어 준비하고 잡채를 1줌 준비한다
+                                    </hr>
+                                    <hr class="card-desc">2. 달걀 지단위에 잡채와 야채를 두고 말아준다
+                                    </hr>
+                                    <hr class="card-desc">3.식힌후 잘 썰어준다
+                                    </hr>
+                                    <hr class="card-desc">4.플레이팅을 한다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -378,9 +515,15 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">초밥밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 공기밥, 설탕, 식초, 소금
+                                    </p>
+                                    <hr class="card-desc">1.밥그릇 정도 되는 크기에 식초 4t넣어주세요
+                                    </hr>
+                                    <hr class="card-desc">2.설탕 2t 넣습니다
+                                    </hr>
+                                    <hr class="card-desc">3.소금 0.9t 넣어주세요</hr>
+                                    <hr class="card-desc">4.설탕과 소금이 잘 녹도록 저어주세요.</hr>
+                                    <hr class="card-desc">5.5.공기밥 2인분(400g) 위에 부어서 잘 섞어주면 초밥용 밥이 완성 됩니다.</hr>
                                 </div>
                             </div>
                         </div>
@@ -390,7 +533,20 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">장어초밥</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 마더킴 미리구운 바다장어, 흰쌀밥, 김밥용 김, 식초, 설탕, 소금
+                                    </p>
+                                    <hr class="card-desc">1.해동 : 냉동된 장어는 냉장해동 and 가열 : 전자레인지 사용가능한 용기에 장어를 담아 2-3분
+                                    돌려주세요.
+                                    (장어를 꺼낼 때, 포장지에 남은 소스도 꼼꼼히 쏟아내요!)</hr>
+                                    <hr class="card-desc">2.꺼낸 장어는 비스듬하고 길게, 한입 크기로 썰어주세요.</hr>
+                                    <hr class="card-desc">3.밥 양념 : 식초, 설탕, 소금을 섞어 설탕을 녹여 밥에 넣고 고루 섞어주세요.</hr>
+                                    <hr class="card-desc">4.만들기 : 밥을 한입 크기로 뭉쳐주세요
+                                    집에서 만드실 때, 맨손에 식용유를 넉넉히 발라서
+                                    밥을 뭉쳐주셔야 손바닥에 밥알이 달라붙는 걸 방지 할 수 있어요~
+                                    (밥그릇옆에 기름을 종지에 담아 그때그때 발라주세요!)</hr>
+                                    <hr class="card-desc">5.장어 올리기 : 한입크기 밥 위에 장어를 올려주고, 길게 썬 김으로 둘러주세요.
+                                    김을 두르고 남은 부분은 가위로 잘라주시고,
+                                    아랫부분에 물이나 기름으로 겹쳐주셔야 떨어지지 않아요!</hr>
                                 </div>
                             </div>
                         </div>
@@ -400,9 +556,14 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">간장우동</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료:우동면, 테라오카 타마고니카케루,
+                                    </p>
+                                    <hr class="card-desc">1.우동면을 쌂는다, 면 특유의 냄새를 잡기 위해 다시다를 넣어도 좋다</hr>
+                                    <hr class="card-desc">2. 일본식 간장을 3스푼 물 1스푼 넣고
+                                    </hr>
+                                    <hr class="card-desc">3. 비벼준다
+                                    </hr>
+                                    <hr class="card-desc">4. 면이 으깨지지 않게 조심스럽게 비벼준다</hr>
                                 </div>
                             </div>
                         </div>
@@ -412,9 +573,14 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">연어초밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 밥, 훈재연어, 와사비, 식초, 매실청, 소금, 청주
+                                    </p>
+                                    <hr class="card-desc">1. 약간 꼬들하게 지은 밥에 식초 1 : 매실청 1/2 : 소금 1/2</hr>
+                                    <hr class="card-desc">2. 많이 단거 싫어서 설탕안넣고 매실청만 조금 넣어줬어요.</hr>
+                                    <hr class="card-desc">3. 마트에서 산 훈제연어는 청주에 담궈 비린내 제거합니다.
+                                    </hr>
+                                    <hr class="card-desc">4.밥에 와사비 올려주고 연어만 올려주면 끝.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -428,9 +594,22 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">라멘</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 생면, 돼지고기, 미소, 두반장, 설탕, 물, 생강, 치킨스탁, 마늘, 간장, 참기름, 미소,
+                                    </p>
+                                    <hr class="card-desc">1.생강은 다져둔다.대파는 채썰어서 찬물에 담가두고, 쪽파일 경우 쫑쫑 썰어서 준비해준다.
+                                    </hr>
+                                    <hr class="card-desc">2.숙주는 씻어서 물기를 빼놓는다. 계란은 반으로 잘라 놓는다.
+                                    </hr>
+                                    <hr class="card-desc">3.팬에 오일을 살짝만 두르고 돼지고기 간 것과 생강을 주걱으로 갈라가며 고슬고슬하게 볶는다.
+                                    </hr>
+                                    <hr class="card-desc">4.두반장, 미소, 설탕을 넣고, 물 1/4컵을 붓고 조린다. 냄비에 참기름 1t을 두르고 마늘·생강 1/2t씩
+                                    넣고 볶는다.
+                                    </hr>
+                                    <hr class="card-desc">5.잘 볶아지면 물 400ml, 치킨 부이용 1t, 미소 1T도 잘 풀어넣는다. 면은 물기를 털고 그릇에 국물을
+                                    넣어준 뒤 면을 넣어준다.
+                                    </hr>
+                                    <hr class="card-desc">6. 숙주와 옥수수, 대파, 아지츠케 타마고 토핑해준다. 고기도 올려주고, 숙주는 추가해가면서 먹는다.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -440,7 +619,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">야키토리</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료:원하는 꼬치구이 재료
+                                    </p>
+                                    <hr class="card-desc">1.재료를 먹기 좋은 사이즈로 손질해준다
+                                    </hr>
+                                    <hr class="card-desc">2.꼬치스틱을 끼워서 먹기좋은 양만큼만 넣는다
+                                    </hr>
+                                    <hr class="card-desc">3.숯불을 피워 불 향이 나게끔 한다.
+                                    </hr>
+                                    <hr class="card-desc">4.거뭇하게 익을때 쯤
+                                    </hr>
+                                    <hr class="card-desc">5.플레이팅해서 꼬치 밑 부분이 일치할 수 있게 놔준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -450,9 +640,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">일본식교자</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 물만두, 연어알, 고수, 일본식계란 간장
+                                    </p>
+                                    <hr class="card-desc">1.물만두를 찜통에 넣고 익힌다
+                                    </hr>
+                                    <hr class="card-desc">2.다 익어갈 즈음 고수를 먹기좋은 양만 선별해서
+                                    </hr>
+                                    <hr class="card-desc">3.만두 위에 일본식 계란 간장을 2스푼 올려준다
+                                    </hr>
+                                    <hr class="card-desc">4.그 위에 고수 와 연어알을 차례대로 올려주고
+                                    </hr>
+                                    <hr class="card-desc">5.플레이팅하면 끝!
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -462,9 +661,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">덴뿌라</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 튀김가루, 밀가루반죽, 물 식용유대용량, 새우, 즉석밥,
+                                    </p>
+                                    <hr class="card-desc">1.새우를 깨끗히 싯어서 말려주고
+                                    </hr>
+                                    <hr class="card-desc">2.밀가루반죽에 물을 부어 농도를 잡고
+                                    </hr>
+                                    <hr class="card-desc">3.새우를 반죽에 넣고 튀김가루을 뭍여 180도에 튀겨준다
+                                    </hr>
+                                    <hr class="card-desc">4.즉석밥을 전자렌지에 넣고
+                                    </hr>
+                                    <hr class="card-desc">5.플레이팅해주면 끝난다.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -479,9 +687,21 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">팬케익</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 중력분, 설탕, 베이킹파우더, 우유 상온, 달걀, 버터, 딸기, 생크림, 베리잼
+                                    </p>
+                                    <hr class="card-desc">1.중력분 밀가루 120g과 설탕 17g 베이킹파우더 3g을 넣어줍니다.
+                                    </hr>
+                                    <hr class="card-desc">2.준비한 가루는 체쳐서 그릇에 담아주세요.미지근한 우유 한 컵과 달걀도 하나 톡 깨뜨려 넣어주세요. 뭉침
+                                    없이 잘 섞어줍니다.
+                                    </hr>
+                                    <hr class="card-desc">3.팬에 기름을 한 두방울 떨어뜨려주시고, 팬을 가볍게 닦아내주세요.가장 작은팬을 사용해서 가득차 보이네요.
+                                    일반 팬 사용하시면 됩니다 :)
+                                    </hr>
+                                    <hr class="card-desc">4.폭신하게 부풀어오르고 기포가 생기면 잘되어가고 있다는 표시입니다.만들어진 팬케이크들은 겹겹이 올려주시고,
+                                    사이사이 버터를 조금씩 올려주세요. 녹으면서 버터향이 베인답니다.
+                                    </hr>
+                                    <hr class="card-desc">5.토핑재료로는 집에있는 생크림, 베리잼, 냉동딸기를 이용해봤어요.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -491,7 +711,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">스테이크</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 스테이크 등심, 로즈마리, 버터, 소금, 후추
+                                    </p>
+                                    <hr class="card-desc">1.먼저 스테이크 핏기를 빼기위해 키친타올로 눌러서 닦아내줍니다. 팬에 기름을 두르고
+                                    </hr>
+                                    <hr class="card-desc">2.스테이크 소금 후추를 적당량 뿌린 뒤, 팬에 넣어준다.
+                                    </hr>
+                                    <hr class="card-desc">3.적당히 익어갈 때 즈음, 버터와 로즈마리를 넣고
+                                    </hr>
+                                    <hr class="card-desc">4.녹은 버터를 수저를 이용해 스테이크 위에 뿌려준다.
+                                    </hr>
+                                    <hr class="card-desc">5.스테이크를 꺼내 레스팅을 해주고, 10분정도 뒤에 잘라서 굽기를 확인한다!
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -501,9 +732,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">피자</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <p class="card-text">재료: 프리메이드 피자도우, 원하는 토핑, 올리브유 치즈
+                                    </p>
+                                    <hr class="card-desc">1.피자도우를 먹기 좋은 사이즈로 펴준다, 그 뒤 올리브유를 한스푼만 둘러준다
+                                    </hr>
+                                    <hr class="card-desc">2.치즈를 먼저 꽉곽 채워서 도우 위에 올려준 뒤
+                                    </hr>
+                                    <hr class="card-desc">3.원하는 토핑을 올려준다
+                                    </hr>
+                                    <hr class="card-desc">4.오븐에 넣어서 빵 겉면이 부풀어 오를때 까지 기다렸다
+                                    </hr>
+                                    <hr class="card-desc">5.오븐에서 꺼내, 먹기좋은 사이즈로 잘라준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -513,9 +753,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">추수감사절 터키</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 칠면조, 오렌지, 사과, 양파, 샐러리, 당금, 양파, 월계수잎, 통후추, 소금, 설탕, 버터, 시즈닝
+                                    </p>
+                                    <hr class="card-desc">1.모든 재료에 버터를 잘 녹아들게 한뒤
+                                    </hr>
+                                    <hr class="card-desc">2.잘 익은 재료들을 칠면조 안에 다 넣어준다
+                                    </hr>
+                                    <hr class="card-desc">3.다리를 묶은 뒤
+                                    </hr>
+                                    <hr class="card-desc">4.오븐에 넣어서 겉표면이 노릇해질때즈음
+                                    </hr>
+                                    <hr class="card-desc">5.오븐에서 꺼내, 확인한 뒤 플레이팅 하면 된다.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -529,9 +778,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">미니피자</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 미니도우, 피자소스, 페퍼로니
+                                    </p>
+                                    <hr class="card-desc">1.미니도우위에 피자소스를 바른다
+                                    </hr>
+                                    <hr class="card-desc">2.패퍼로니를 먹기좋은 갯수로 나눠 토핑으로 올려준다.
+                                    </hr>
+                                    <hr class="card-desc">3.치즈는 항상 토핑 올리기 전 과 후 둘 다 올려준다.
+                                    </hr>
+                                    <hr class="card-desc">4.오븐에 180도로 20분가량 구워주고
+                                    </hr>
+                                    <hr class="card-desc">5.빵 겉면이 잘 익었다 싶으면 빼준다
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -541,7 +799,18 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">센드위치</h5>
-                                    <p class="card-text">This is a short card.</p>
+                                    <p class="card-text">재료: 센드위치 빵, 원하는 토핑
+                                    </p>
+                                    <hr class="card-desc">1.샌드위치 위에 단백질이 될 만한 재료와 치즈를 올려 오븐에 구워준다
+                                    </hr>
+                                    <hr class="card-desc">2.원하는 채소를 손질해, 바삭하게 익은 센드위치 위에 올려준다
+                                    </hr>
+                                    <hr class="card-desc">3.소스는 왠만하면, 데리야키소스와 소금으로 대채한다
+                                    </hr>
+                                    <hr class="card-desc">4.만약 데리야키소스가 없을시 소금과 후추로도 간을 할 수 있다
+                                    </hr>
+                                    <hr class="card-desc">5.잘 덥어서 재료가 쏟아지지 않게 잘 포갠다.
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -550,10 +819,22 @@
                                 <img src="https://cdn.discordapp.com/attachments/1041596654878466092/1041911792579923988/pexels-rene-roa-12261162.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">알밥</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content.</p>
+                                    <h5 class="card-title">켄터키 후라이드 치킨</h5>
+                                    <p class="card-text">재료: 닯다리, 날개, 카레가루, 다진마늘, 맛술, 올리브오일, 허브솔트
+                                    </p>
+                                    <hr class="card-desc">1.닭은 물에 헹궈 씻어주고 물기를 빼서 준비해 주세요. 물기를 뺀 닭 다리, 날개를 넣어 밑간을
+                                    해주세요.
+                                    </hr>
+                                    <hr class="card-desc">2.양념재료 올리브오일 2, 맛술 2, 카레 가루 2, 다진 마늘 1, 허브솔트 0.7을 넣어 조물조물
+                                    양념해서 1시간 정도 양념이 배도록 재워둡니다.
+                                    </hr>
+                                    <hr class="card-desc">3.200도에서 15분간 구워 줍니다.
+                                    </hr>
+                                    <hr class="card-desc">4.15분간 굽고 위치를 바꿔 가며 뒤집어서200도에서 다시 15분간 구워주세요. 총 30분 구워
+                                    주었어요.
+                                    </hr>
+                                    <hr class="card-desc">5.완성
+                                    </hr>
                                 </div>
                             </div>
                         </div>
@@ -563,15 +844,32 @@
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">햄버거</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">재료: 소고기 갈은것, 양파, 피클, 치즈, 빵, 양상추, 마요네즈, 토마토, 빵가루, 설탕, 간장,
+                                        올리고당
+                                    </p>
+                                    <hr class="card-desc">1. 돼지고기와 소고기는 1:1 로 준비 해서 맛술, 매실, 소금, 후추를 약간씩 넣고 밑간 해 주기.
+                                    </hr>
+                                    <hr class="card-desc">2. 야채 볶아 수분 날리기! 양파와 파프리카는 쎈불에 휙~ 볶아 수분을 날려주기. 밑간 된 고기에 볶음
+                                    야채, 빵가루 두세숟가락 (질기 정도에 맞춰) 넣어 반죽하기!
+                                    </hr>
+                                    <hr class="card-desc">3.다 섞여 잘 쳐진 패티는 동그랗게 모양 만들기 패티는 기름 두른 팬에 앞뒤 골고루 구워주고,
+                                    </hr>
+                                    <hr class="card-desc">4. 다음은 소스 만들기! 간장6, 설탕4, 올리고당2, 물3 밥 숟가락으로 넣고 달달달달~~~~~~
+                                    졸여주세요. 취향껏 짠맛, 단맛 가감 하기~~~ㅎㅎ 푹~~~ 졸이다 보면 걸죽하게 변해있을꺼예요. 그럼 불을끄고, 잠시 식혀두면 올리고당이랑
+                                    설탕이 들어가서 묽었던 소스가 걸죽하게 변해요,
+
+                                    </hr>
+                                    <hr class="card-desc">5. 하나씩 올려주면 완성!
+                                    </hr>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="bottom-title">
+                    <h2></h2>
+                </div>
 
 
             </div>
