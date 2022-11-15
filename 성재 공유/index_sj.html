@@ -101,15 +101,15 @@
 
         }
 
-        .btn {
+        #mainButton {
             width: 50px;
             border-radius: 50%;
             margin: 30px 0 0 35px;
             transition: width 0.5s ease-in-out;
-            
+
         }
 
-        .btn:hover {
+        #mainButton:hover {
             width: 75px;
         }
 
@@ -130,6 +130,31 @@
             width: fit-content;
             height: 150px;
             margin: 0 auto;
+        }
+
+        #mySidenav a {
+            position: absolute;
+            left: -80px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #contact {
+            top: 200px;
+            background-color: #555
+        }
+
+        #mdl {
+            max-width: 700px;
         }
     </style>
 
@@ -183,6 +208,17 @@
             $('#chin').hide();
             $('#chin2').hide();
         }
+        
+
+        function show_rank() {
+            $('#mdl').show();
+
+        }
+        function byebye(){
+            $('#mdl').hide();
+        }
+
+
 
 
     </script>
@@ -212,10 +248,10 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class='category1'>
-                    <button onclick="kfood()" type="button" class="btn btn-outline-secondary">한식</button>
-                    <button onclick="chino()" type="button" class="btn btn-outline-secondary">중식</button>
-                    <button onclick="zapan()" type="button" class="btn btn-outline-secondary">일식</button>
-                    <button onclick="fatty()" type="button" class="btn btn-outline-secondary">양식</button>
+                    <button id="mainButton" onclick="kfood()" type="button" class="btn btn-outline-secondary">한식</button>
+                    <button id="mainButton" onclick="chino()" type="button" class="btn btn-outline-secondary">중식</button>
+                    <button id="mainButton" onclick="zapan()" type="button" class="btn btn-outline-secondary">일식</button>
+                    <button id="mainButton" onclick="fatty()" type="button" class="btn btn-outline-secondary">양식</button>
                 </div>
 
                 <div class="card_top" id="kor">
@@ -707,7 +743,7 @@
                         </div>
                         <div class="col">
                             <div class="card h-100">
-                                <img src="https://cdn.discordapp.com/attachments/1041596654878466092/1041911790365315143/pexels-kasumi-loffler-3535383.jpg"
+                                <img src="https://cdn.discordapp.com/attachments/1041596654878466092/1042028116698202122/pexels-snapwire-675951.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">스테이크</h5>
@@ -870,6 +906,29 @@
                 <div class="bottom-title">
                     <h2></h2>
                 </div>
+
+                <div onclick="show_rank()" id="mySidenav" class="sidenav">
+                    <a href="#" id="contact">"랭킹!"</a>
+                </div>
+
+                <div id="mdl" class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">랭킹🔱</h5>
+                          <button onclick="byebye()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button onclick="byebye()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">My Score</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
 
 
             </div>
